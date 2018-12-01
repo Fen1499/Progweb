@@ -34,10 +34,9 @@
 			}
 			document.getElementById("teste").innerHTML = txt+"</table>";
 		};
-			request.open("GET","../_controlador/queriecontrol.php?dia="+dia,true);
+			request.open("GET","../_controlador/quadrocontrol.php?dia="+dia,true);
 			request.send();	
 	}
-	att_table(dia);
 
 	function trocadia(dia)
 	{
@@ -49,3 +48,5 @@
 		}
 		att_table(dia);
 	}
+
+	att_table(dia);

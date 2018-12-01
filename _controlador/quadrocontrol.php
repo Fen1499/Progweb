@@ -1,5 +1,5 @@
 <?php
-    include 'controlador.php';
+    include 'controlador.php';//CONTROLADOR
     class querie_control extends controlador{
 
          //CONSTRUTOR É HERDADO IMPLICITAMENTE

@@ -27,8 +27,8 @@
             {
                 if($this->db->loginprof_qry($this->login,$this->pass))
                 {
-                    //require_once('.../_view/???.php');
-                   echo "LOGIN SHOW";
+                    require_once('../_view/profview.php');
+                   
                 }                    
                 else
                 {
