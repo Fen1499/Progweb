@@ -11,3 +11,4 @@
 		<a href="loginprof.php">PROFESSOR</a>
     </div>
 </body>
+<!-- MUDAR O INDEX PRA CARREGAR TUDO DINAMICAMENTE>
