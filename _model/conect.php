@@ -12,7 +12,7 @@
 			$this->servername = "localhost";
 			$this->user = "root";
 			//$this->password = "felipe123";
-			$this->dbname = "quadro";
+			$this->dbname = "qdh";
 			$this->conn = new mysqli($this->servername,$this->user,$this->password,$this->dbname);
 		}
 
