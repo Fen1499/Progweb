@@ -1,0 +1,94 @@
+body, html {
+    height: 100%;
+	background-color: whitesmoke;
+	overflow: none;
+}
+
+.title {	
+	background-color: lightgray;
+	text-align: center;
+	width: 100%;
+	left:0;
+}
+
+.boxquadro {
+	background-color: lightgray;	
+	width: 100%;
+	left:0;
+}
+
+ul{
+	display: inline-block;
+	text-align: center;
+	list-style-type: none;
+    overflow: hidden;
+    border: none;
+	background-color: lightgrey;
+}
+
+li {
+	text-align:center;
+    float: left;
+}
+
+li button {
+    display: block;
+	color: #666;
+	background-color: lightgrey;
+    text-align: center;
+    padding: 14px 16px;
+	text-decoration: none;
+	border: none;
+}
+
+li button:hover:not(.active) {
+    background-color: darkgrey;
+}
+
+li button.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+.loginInterface {
+	margin: auto;
+	vertical-align: 50%;
+	text-align: center;
+	height: 250px;
+	width: 250px;
+	box-shadow: 0px 0px 5px;
+	vertical-align: 50%;
+}
+
+a{	
+	margin:auto;
+	width: 250px;
+	background-color: rgba(0, 139, 186, 0);
+	opacity: 0.75;
+	border: 1px solid;
+	text-decoration: none;
+	padding: 8px 16px;
+    color: black;
+	text-align: center;
+	padding: 30px 0;
+	display: block;
+    font-size: 24px;
+}
+
+table#tabelaspec {
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+table#tabelaspec th {
+	border: 1px solid #606060;
+	padding: 5px;
+}
+
+table#tabelaspec td {
+	border: 1px solid #606060;
+	padding: 5px;
+}
