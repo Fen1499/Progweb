@@ -1,5 +1,5 @@
 <?php //include 'quadro.php'?>
-<div id="teste">AAA</div>
+<div id="teste">RESERVADO PRA MENSAGENS DE TESTE</div>
 <div class="boxquadro">
     <ul>
         <li><button onclick=showhidden() >ALTERAR HORARIO</button></li>
@@ -40,7 +40,6 @@
 		request.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200) {
                 var myJSON = JSON.parse(this.responseText);
-                document.getElementById("teste").innerHTML = "BBB";
                 var mySELECT = document.getElementById("disc");
                 for(x in myJSON)
                 {

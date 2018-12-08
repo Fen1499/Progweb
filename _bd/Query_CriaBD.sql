@@ -1,18 +1,19 @@
 CREATE TABLE `login` (
-  `userName` varchar(45) CHARACTER SET latin1 NOT NULL,
-  `userPass` varchar(45) CHARACTER SET latin1 NOT NULL,
+  `userName` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `userPass` varchar(45) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`userName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `disciplina` (
   `disc_id` int(11) NOT NULL AUTO_INCREMENT,
-  `disc_nome` varchar(45) CHARACTER SET latin1 NOT NULL,
+  `disc_nome` varchar(45) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`disc_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `professor` (
   `prof_id` int(11) NOT NULL AUTO_INCREMENT,
-  `prof_nome` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `prof_nome` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `profPass` varchar(20) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`prof_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

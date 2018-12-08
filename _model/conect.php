@@ -12,8 +12,9 @@
 			$this->servername = "localhost";
 			$this->user = "root";
 			//$this->password = "felipe123";
-			$this->dbname = "qdh";
+			$this->dbname = "quadro";
 			$this->conn = new mysqli($this->servername,$this->user,$this->password,$this->dbname);
+			$this->conn->set_charset("utf8"); //Passa tudo que vem do db pra utf8
 		}
 
 		private function Conec()//Conecta com o bd [N USADO, mudou para o construtor]
@@ -103,7 +104,7 @@
 			$qstr = "SELECT * FROM disciplina";
 			$result = $this->conn->query($qstr);
 			while($row = $result->fetch_assoc()){
-				array_push($arr,$row['disc_id']);
+				array_push($arr,$row['disc_nome']);
 			}
 			$result->free();
 			return $arr;

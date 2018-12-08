@@ -15,7 +15,7 @@
     $ret = json_encode($ret);
     //TESTE
     $f = fopen("jsontest.txt","w");
-	fwrite($f,$ret);
+	fwrite($f,json_last_error_msg());
 	fclose($f);
 	//FIM DO TESTE
     echo $ret;
