@@ -9,14 +9,6 @@
 			$numrows;
 			$arr = $this->db->qry_all($numrows,$dia);//Passa por referencia pra pegar 2 valores
 			return $arr;//Todas as aulas do dia
-			for($row = 0; $row<$numrows;$row++)
-			{
-				for($col = 0; $col<4; $col++)// SALA HORA DISC PROF
-				{
-					echo $arr[$row][$col];
-				}
-				echo "<br>";
-			}
 		}
 
     }
