@@ -1,20 +1,22 @@
-<?php include 'quadro.php' ?>
+<?php //include 'quadro.php'?>
+<div id="teste">AAA</div>
 <div class="boxquadro">
-<ul>
-    <li><button onclick=showhidden() >ALTERAR HORARIO</button></li>
-</ul>
-<div id="addhorario" hidden>
-    <p>
-    Disciplina <select name="disc"></select>
-    Professor <select name="prof"></select>
-    </p>
-    <p>
-    Sala <select name="sala"></select>
-    Horario <select name="hora"></select>
-    </p>
-    <button onclick=addhora() hidden>+</button>
-    <p><button onclick="">ADD</button></p>
+    <ul>
+        <li><button onclick=showhidden() >ALTERAR HORARIO</button></li>
+    </ul>
+    <div id="addhorario" >
+        <p>
+        Disciplina <select id ="disc" name="disc"></select>
+        Professor <select name="prof"></select>
+        </p>
+        <p>
+        Sala <select name="sala"></select>
+        Horario <select name="hora"></select>
+        </p>
+        <p><button onclick="">ADD</button></p>
 </div>
+
+
 <script>
     function showhidden()
     {
@@ -31,4 +33,26 @@
         x.setAttribute("size","2");
         document.getElementById("horap").appendChild(x);
     }
+
+    function aaa()
+    {
+        var request = new XMLHttpRequest();
+		request.onreadystatechange = function(){
+			if (this.readyState == 4 && this.status == 200) {
+                var myJSON = JSON.parse(this.responseText);
+                document.getElementById("teste").innerHTML = "BBB";
+                var mySELECT = document.getElementById("disc");
+                for(x in myJSON)
+                {
+                    var y = document.createElement("OPTION")
+                    y.setAttribute("value",myJSON[x]);
+                    y.innerHTML = myJSON[x];
+                    mySELECT.appendChild(y);
+                }
+            }
+        };
+        request.open("GET", "../_controlador/profcontrol.php", true);
+        request.send();
+    }
+    aaa();
 </script>

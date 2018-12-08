@@ -1,6 +1,6 @@
 <?php
     include 'controlador.php';//CONTROLADOR
-    class prof_control extends controlador()
+    class prof_control extends controlador
     {
         //CONSTRUTOR É HERDADO IMPLICITAMENTE
 
@@ -12,11 +12,11 @@
     }
     $profcontrol = new prof_control($db);
     $ret = $profcontrol->get_disc();
+    $ret = json_encode($ret);
     //TESTE
-	$f = fopen("jsontest.txt","w");
+    $f = fopen("jsontest.txt","w");
 	fwrite($f,$ret);
 	fclose($f);
 	//FIM DO TESTE
-    $ret = json_encore($ret);
     echo $ret;
 ?>

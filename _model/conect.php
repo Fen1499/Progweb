@@ -103,7 +103,7 @@
 			$qstr = "SELECT * FROM disciplina";
 			$result = $this->conn->query($qstr);
 			while($row = $result->fetch_assoc()){
-				array_push($arr,$row[disc_id]+$row[disc_nome]);
+				array_push($arr,$row['disc_id']);
 			}
 			$result->free();
 			return $arr;
