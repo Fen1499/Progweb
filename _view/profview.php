@@ -39,7 +39,7 @@
         mySELECT = document.getElementById("hora");
         for(x=9;x<22;x++)
         {
-            var y = document.createElement("OPTION")
+            var y = document.createElement("OPTION");
              y.setAttribute("value",x);
              y.innerHTML = x+":00";
              mySELECT.appendChild(y);
@@ -51,9 +51,9 @@
         mySELECT = document.getElementById("sala");
         for(x=1;x<11;x++)
         {
-            var y = document.createElement("OPTION")
+            var y = document.createElement("OPTION");
             y.setAttribute("value",x);
-            y.innerHTML = "Sala"x;
+            y.innerHTML = "Sala"+x;
             mySELECT.appendChild(y);
         }
     }
@@ -67,7 +67,7 @@
                 var mySELECT = document.getElementById(tipo);
                 for(x in myJSON)
                 {
-                    var y = document.createElement("OPTION")
+                    var y = document.createElement("OPTION");
                     y.setAttribute("value",myJSON[x]);
                     y.innerHTML = myJSON[x];
                     mySELECT.appendChild(y);
