@@ -2,7 +2,7 @@
 <div id="teste">RESERVADO PRA MENSAGENS DE TESTE</div>
 <div class="boxquadro">
     <ul>
-        <li><button onclick=showhidden() >ALTERAR HORARIO</button></li>
+        <li><button onclick=showhidden() >ADICIONAR HORARIO</button></li>
     </ul>
     <div id="addhorario" >
         <p>
@@ -10,8 +10,8 @@
         Professor <select id = "prof" name="prof"></select>
         </p>
         <p>
-        Sala <select name="sala"></select>
-        Horario <select name="hora"></select>
+        Sala <select id="sala" name="sala"></select>
+        Horario <select id="hora" name="hora"></select>
         </p>
         <p><button onclick="">ADD</button></p>
 </div>
@@ -32,6 +32,30 @@
         x.setAttribute("max","21");
         x.setAttribute("size","2");
         document.getElementById("horap").appendChild(x);
+    }
+
+    function load_hora()
+    {
+        mySELECT = document.getElementById("hora");
+        for(x=9;x<22;x++)
+        {
+            var y = document.createElement("OPTION")
+             y.setAttribute("value",x);
+             y.innerHTML = x+":00";
+             mySELECT.appendChild(y);
+        }
+    }
+
+    function load_sala()
+    {
+        mySELECT = document.getElementById("sala");
+        for(x=1;x<11;x++)
+        {
+            var y = document.createElement("OPTION")
+            y.setAttribute("value",x);
+            y.innerHTML = "Sala"x;
+            mySELECT.appendChild(y);
+        }
     }
 
     function load_datalist(tipo)
@@ -55,4 +79,6 @@
     }
     load_datalist("disc");
     load_datalist("prof");
+    load_hora();
+    load_sala();
 </script>

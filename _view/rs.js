@@ -16,7 +16,7 @@
 				var myJSON = JSON.parse(this.responseText);
 				var sala,hora;
 				var x = 0;
-				for(hora=9;hora<22;hora++)
+				for(hora=7;hora<22;hora++)
 				{
 					txt += "<tr><td>"+hora+":00</td>";
 					for(sala=1;sala<11;sala++)
