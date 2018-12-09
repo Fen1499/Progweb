@@ -10,6 +10,7 @@
         Professor <select id = "prof" name="prof"></select>
         </p>
         <p>
+        Dia <select id="dia" name="dia"></select>
         Sala <select id="sala" name="sala"></select>
         Horario <select id="hora" name="hora"></select>
         </p>
@@ -58,6 +59,20 @@
         }
     }
 
+    function load_dia()
+    {
+        var semana =["Segunda","Terça","Quarta"
+	    ,"Quinta","Sexta"];
+        mySELECT = document.getElementById("dia");
+        for(x=0;x<5;x++)
+        {
+            var y = document.createElement("OPTION");
+            y.setAttribute("value",x);
+            y.innerHTML = semana[x];
+            mySELECT.appendChild(y);
+        }
+    }
+
     function load_datalist(tipo)
     {
         var request = new XMLHttpRequest();
@@ -81,4 +96,5 @@
     load_datalist("prof");
     load_hora();
     load_sala();
+    load_dia();
 </script>

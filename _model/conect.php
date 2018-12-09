@@ -120,5 +120,9 @@
 			$result->free();
 			return $arr;
 		}
+
+		public function add_horario(){
+			$qstr = "INSERT INTO aula(aula_dia,aula_sala,aula_hora,disc_id,prof_id)";
+		}
 	}
 ?>
