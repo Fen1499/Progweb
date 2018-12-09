@@ -4,18 +4,23 @@
     {
         //CONSTRUTOR É HERDADO IMPLICITAMENTE
 
-        public function get_disc()
+        public function get_qry($tipo)
         {
-            $arr = $this->db->disc_qry();
+            if($tipo == "disc"){
+                $arr = $this->db->disc_qry();
+            }
+            else if($tipo == "prof"){
+                $arr = $this->db->prof_qry();
+            }
             return $arr;
         }
     }
     $profcontrol = new prof_control($db);
-    $ret = $profcontrol->get_disc();
-    $ret = json_encode($ret);
+    $ret = $profcontrol->get_qry($_REQUEST['qrytipo']);
+    $ret = json_encode($ret);//JSON_UNESCAPED_UNICODE
     //TESTE
     $f = fopen("jsontest.txt","w");
-	fwrite($f,json_last_error_msg());
+	fwrite($f,$ret);
 	fclose($f);
 	//FIM DO TESTE
     echo $ret;

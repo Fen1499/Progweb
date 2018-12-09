@@ -7,7 +7,7 @@
     <div id="addhorario" >
         <p>
         Disciplina <select id ="disc" name="disc"></select>
-        Professor <select name="prof"></select>
+        Professor <select id = "prof" name="prof"></select>
         </p>
         <p>
         Sala <select name="sala"></select>
@@ -34,13 +34,13 @@
         document.getElementById("horap").appendChild(x);
     }
 
-    function aaa()
+    function load_datalist(tipo)
     {
         var request = new XMLHttpRequest();
 		request.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200) {
                 var myJSON = JSON.parse(this.responseText);
-                var mySELECT = document.getElementById("disc");
+                var mySELECT = document.getElementById(tipo);
                 for(x in myJSON)
                 {
                     var y = document.createElement("OPTION")
@@ -50,8 +50,9 @@
                 }
             }
         };
-        request.open("GET", "../_controlador/profcontrol.php", true);
+        request.open("GET", "../_controlador/profcontrol.php?qrytipo="+tipo, true);
         request.send();
     }
-    aaa();
+    load_datalist("disc");
+    load_datalist("prof");
 </script>

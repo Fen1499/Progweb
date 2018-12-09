@@ -109,5 +109,16 @@
 			$result->free();
 			return $arr;
 		}
+
+		public function prof_qry(){ //Retorna um vetor no formato [Id1Nome1,Id2Nome2,...,IdXNomeX]
+			$arr = array();
+			$qstr = "SELECT * FROM professor";
+			$result = $this->conn->query($qstr);
+			while($row = $result->fetch_assoc()){
+				array_push($arr,$row['prof_nome']);
+			}
+			$result->free();
+			return $arr;
+		}
 	}
 ?>
