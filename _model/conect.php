@@ -123,9 +123,14 @@
 
 		public function add_horario($disc_id,$prof_id,$dia,$sala,$hora){//TEM QUE VER ISSO AQUI
 			
-
+			 //TESTE
+			 $f = fopen("addtest.txt","w");
+			 fwrite($f,"dia: ".$dia."_discid:".$disc_id."_profid:".$prof_id);
+			 fclose($f);
+			 //FIM DO TESTE
 			$qstr = "INSERT INTO aula(aula_dia,aula_sala,aula_hora,disc_id,prof_id)
 			VALUES($dia,$sala,$hora,$disc_id,$prof_id)";
+			return $this->conn->query($qstr);
 		}
 	}
 ?>

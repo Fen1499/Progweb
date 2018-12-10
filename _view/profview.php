@@ -39,13 +39,13 @@
         {
             vet.push(x[aux].value);
         }
-        JSON.stringify(vet);
+        //JSON.stringify(vet);
         console.log(vet);
 
         var request = new XMLHttpRequest();
 		request.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200) {
-               alert("O horario foi adicionado, ou n :v")
+               alert(this.responseText);
             }
         };
         request.open("GET", "../_controlador/addcontrol.php?auladata="+vet, true);
