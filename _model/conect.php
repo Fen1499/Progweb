@@ -104,7 +104,7 @@
 			$qstr = "SELECT * FROM disciplina";
 			$result = $this->conn->query($qstr);
 			while($row = $result->fetch_assoc()){
-				array_push($arr,$row['disc_nome']);
+				array_push($arr,$row['disc_id']." ".$row['disc_nome']);
 			}
 			$result->free();
 			return $arr;
@@ -115,14 +115,17 @@
 			$qstr = "SELECT * FROM professor";
 			$result = $this->conn->query($qstr);
 			while($row = $result->fetch_assoc()){
-				array_push($arr,$row['prof_nome']);
+				array_push($arr,$row['prof_id']." ".$row['prof_nome']);
 			}
 			$result->free();
 			return $arr;
 		}
 
-		public function add_horario(){
-			$qstr = "INSERT INTO aula(aula_dia,aula_sala,aula_hora,disc_id,prof_id)";
+		public function add_horario($disc_id,$prof_id,$dia,$sala,$hora){//TEM QUE VER ISSO AQUI
+			
+
+			$qstr = "INSERT INTO aula(aula_dia,aula_sala,aula_hora,disc_id,prof_id)
+			VALUES($dia,$sala,$hora,$disc_id,$prof_id)";
 		}
 	}
 ?>

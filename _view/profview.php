@@ -14,7 +14,7 @@
         Sala <select id="sala" name="sala"></select>
         Horario <select id="hora" name="hora"></select>
         </p>
-        <p><button onclick="">ADD</button></p>
+        <p><button onclick=tryADD()>ADD</button></p>
 </div>
 
 
@@ -25,14 +25,32 @@
         x.hidden = !x.hidden;
     }
 
-    function addhora()
+    function tryADD()
     {
-        var x = document.createElement("INPUT");
-        x.setAttribute("type", "text");
-        x.setAttribute("min","7");
-        x.setAttribute("max","21");
-        x.setAttribute("size","2");
-        document.getElementById("horap").appendChild(x);
+        /*prof_id = document.getElementById("prof").value;
+        prof_id = prof_id.split(" ")[0];
+
+        disc_id = document.getElementById("disc").value;
+        disc_id = disc_id.split(" ")[0];*/
+        
+        var x = document.getElementsByTagName("SELECT");
+        var vet = [];
+        for(aux=0;aux<5;aux++)//Disc Prof Dia Sala Hora
+        {
+            vet.push(x[aux].value);
+        }
+        JSON.stringify(vet);
+        console.log(vet);
+
+        var request = new XMLHttpRequest();
+		request.onreadystatechange = function(){
+			if (this.readyState == 4 && this.status == 200) {
+               alert("O horario foi adicionado, ou n :v")
+            }
+        };
+        request.open("GET", "../_controlador/addcontrol.php?auladata="+vet, true);
+        request.send();
+
     }
 
     function load_hora()

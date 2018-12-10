@@ -6,7 +6,7 @@
 	<link href="../_estilos/estilo.css" rel="stylesheet">
 </head>
 <body>
-	<div>
+	<div class="selectType">
 		<a href="login.php">ALUNO</a>
 		<a href="loginprof.php">PROFESSOR</a>
     </div>
