@@ -18,7 +18,7 @@
 		<tr><td>A</td><td>B</td></tr>
 		</table>
 	</div>
-	<script src="rs.js"></script>
+	<script src="scriptQuadro.js"></script>
 </div>
 <?php
 //TO DO

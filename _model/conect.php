@@ -132,5 +132,15 @@
 			VALUES($dia,$sala,$hora,$disc_id,$prof_id)";
 			return $this->conn->query($qstr);
 		}
+
+		public function add_disc($disc_nome){
+			$qstr = "INSERT INTO disciplina(disc_nome) VALUES($disc_nome)";
+			return $this->conn->query($qstr);
+		}
+
+		public function get_error()
+		{
+			return $this->conn->error;
+		}
 	}
 ?>

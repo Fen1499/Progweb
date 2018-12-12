@@ -23,7 +23,7 @@
 							txt += "<td>"+myJSON[x].disc_nome+"<br>"+myJSON[x].prof_nome+"</td>";
 							x++;
 						}
-						else{txt += "<td><br></td>";}
+						else{txt += "<td><br><br></td>";}
 
 					}
 					txt += "</tr>";

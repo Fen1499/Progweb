@@ -20,7 +20,7 @@
                 }
                 else
                 {
-                    echo "User os pass errado<br>";//USER OS PASS ERRADO
+                    require_once('../_view/login.php');//USER OS PASS ERRADO
                 }  
             }
             if($tipo =="prof")
@@ -32,7 +32,7 @@
                 }                    
                 else
                 {
-                    echo "User ou pass errado<br>";
+                    require_once('../_view/loginprof.php');
                 }
             }
                 
