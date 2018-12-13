@@ -56,15 +56,6 @@ li button {
 }
 
 
-
-.selectType{
-	color: #ddd;
-	background-color: #444;
-	width: 16%;
-	margin-left: 42%;
-	margin-top: 10%; 
-}
-
 li button:hover:not(.active) {
 	color: #ddd;
     background-color: darkgrey;
@@ -87,19 +78,22 @@ li button.active {
 	vertical-align: 50%;
 }
 
-a{	
-	color: #ddd;
-	margin:auto;
-	width: 250px;
-	background-color: rgba(0, 139, 186, 0);
-	opacity: 0.75;
-	border: 1px solid;
-	text-decoration: none;
-	padding: 8px 16px;
-	border-color: black;
-	text-align: center;
-	padding: 30px 0;
-	display: block;
+.selectType{
+    width: 250px;
+    margin-left: 42%;
+    margin-top: 10%; 
+}
+
+a{
+    color: #ddd;
+    margin:auto;
+    width: 250px;
+    background-color: #444;
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+    padding: 30px 0;
+    display: block;
     font-size: 24px;
 }
 
@@ -122,6 +116,7 @@ table#tabelaspec td {
 	color: #ddd;
 	border: 1px solid #606060;
 	padding: 5px;
+	text-align:center;
 }
 
 .ict-img{

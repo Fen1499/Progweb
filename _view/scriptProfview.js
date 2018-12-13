@@ -42,7 +42,7 @@ function showhidden(str)
     function load_hora()
     {
         mySELECT = document.getElementById("hora");
-        for(x=9;x<22;x++)
+        for(x=7;x<22;x++)
         {
             var y = document.createElement("OPTION");
              y.setAttribute("value",x);
@@ -53,8 +53,9 @@ function showhidden(str)
 
     function load_sala()
     {
+        
         mySELECT = document.getElementById("sala");
-        for(x=1;x<11;x++)
+        for(x=1;x<9;x++)
         {
             var y = document.createElement("OPTION");
             y.setAttribute("value",x);
