@@ -27,6 +27,17 @@
             }
             else{return $this->db->get_error();}
         }
+
+        public function remvhorario($vet)
+        {
+            $aux = explode(",",$vet);//Dia Sala Hora
+             
+            if($this->db->remv_horario($aux[0]+2,$aux[1],$aux[2]))
+            {
+                return "Horario removido com sucesso";
+            }
+            else{return $this->db->get_error();}
+        }
     }
 
     $addcontrol = new add_control($db);
@@ -38,7 +49,9 @@
         case "2":
             $ret = $addcontrol->adddisc($_REQUEST['newdisc']);
             break;
-
+        case "3":
+            $ret = $addcontrol->remvhorario($_REQUEST['aulahora']);
+            break;
     }
     echo $ret;
 ?>

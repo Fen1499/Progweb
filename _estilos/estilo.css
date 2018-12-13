@@ -79,21 +79,21 @@ li button.active {
 }
 
 .selectType{
-    width: 250px;
-    margin-left: 42%;
-    margin-top: 10%; 
+	width: 250px;
+	margin-left: 42%;
+	margin-top: 10%; 
 }
 
-a{
-    color: #ddd;
-    margin:auto;
-    width: 250px;
-    background-color: #444;
-    border: 1px solid;
-    border-color: black;
-    text-align: center;
-    padding: 30px 0;
-    display: block;
+a{	
+	color: #ddd;
+	margin:auto;
+	width: 250px;
+	background-color: #444;
+	border: 1px solid;
+	border-color: black;
+	text-align: center;
+	padding: 30px 0;
+	display: block;
     font-size: 24px;
 }
 
@@ -116,11 +116,11 @@ table#tabelaspec td {
 	color: #ddd;
 	border: 1px solid #606060;
 	padding: 5px;
-	text-align:center;
+	text-align: center;
 }
 
 .ict-img{
 	position: absolute;
-	width: 10%;
-	height: 15%;
+	width: 8%;
+	height: 12%;
 }

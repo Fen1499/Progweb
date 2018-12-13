@@ -39,28 +39,58 @@ function showhidden(str)
         request.send(); 
     }
 
+    function tryRMV_horario()
+    {
+        var x = document.getElementById("remvhorario");
+        x = x.getElementsByTagName("SELECT");
+        var vet = [];
+        for(aux=0;aux<3;aux++)//Dia Sala Hora
+        {
+            vet.push(x[aux].value);
+        }
+        console.log(vet);
+
+        var request = new XMLHttpRequest();
+		request.onreadystatechange = function(){
+			if (this.readyState == 4 && this.status == 200) {
+               alert(this.responseText);
+            }
+        };
+        request.open("GET", "../_controlador/addcontrol.php?aulahora="+vet+"&addid=3", true);
+        request.send();
+    }
+
     function load_hora()
     {
         mySELECT = document.getElementById("hora");
+        mySELECT2 = document.getElementById("rmvhora");
         for(x=7;x<22;x++)
         {
             var y = document.createElement("OPTION");
+            var z = document.createElement("OPTION");
              y.setAttribute("value",x);
              y.innerHTML = x+":00";
+             z.setAttribute("value",x);
+             z.innerHTML = x+":00";
              mySELECT.appendChild(y);
+             mySELECT2.appendChild(z);
         }
     }
 
     function load_sala()
     {
-        
         mySELECT = document.getElementById("sala");
-        for(x=1;x<9;x++)
+        mySELECT2 = document.getElementById("rmvsala");
+        for(x=1;x<11;x++)
         {
             var y = document.createElement("OPTION");
+            var z = document.createElement("OPTION");
             y.setAttribute("value",x);
             y.innerHTML = "Sala"+x;
+            z.setAttribute("value",x);
+            z.innerHTML = "Sala"+x;
             mySELECT.appendChild(y);
+            mySELECT2.appendChild(z);
         }
     }
 
@@ -69,12 +99,18 @@ function showhidden(str)
         var semana =["Segunda","Terça","Quarta"
 	    ,"Quinta","Sexta"];
         mySELECT = document.getElementById("dia");
+        mySELECT2 = document.getElementById("rmvdia");
+
         for(x=0;x<5;x++)
         {
             var y = document.createElement("OPTION");
+            var z = document.createElement("OPTION");
             y.setAttribute("value",x);
             y.innerHTML = semana[x];
+            z.setAttribute("value",x);
+            z.innerHTML = semana[x];
             mySELECT.appendChild(y);
+            mySELECT2.appendChild(z);
         }
     }
 

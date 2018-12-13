@@ -120,6 +120,11 @@
 			$qstr = "INSERT INTO disciplina(disc_nome) VALUES($disc_nome)";
 			return $this->conn->query($qstr);
 		}
+		
+		public function remv_horario($dia, $sala, $hora){
+			$qstr = "DELETE FROM aula WHERE aula_dia =".$dia." AND aula_hora =".$hora." AND aula_sala=".$sala;
+			return $this->conn->query($qstr);
+		}
 
 		public function get_error()
 		{

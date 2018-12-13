@@ -1,7 +1,9 @@
+<?php include 'quadro.php'?>
 <div class="boxquadro">
     <ul>
         <li><button onclick=showhidden("addhorario") >ADICIONAR HORARIO</button></li>
         <li><button onclick=showhidden("adddisc") >ADICIONAR DISCIPLINA</button></li>
+        <li><button onclick=showhidden("remvhorario") >REMOVER HORARIO</button></li>
     </ul>
     <div id="addhorario" hidden>
         <p>
@@ -18,7 +20,15 @@
     <div id="adddisc" hidden>
         Disciplina <input id="add_disc" class="add_disc" type="text">
         <button onclick=tryADD_disc()>ADD</button>
-    </div> 
+    </div>
+    <div id="remvhorario" hidden>
+        <p>
+        Dia <select id="rmvdia" name="dia"></select>
+        Sala <select id="rmvsala" name="sala"></select>
+        Horario <select id="rmvhora" name="hora"></select>
+        </p>
+        <p><button onclick=tryRMV_horario()>REMOVER</button></p>
+    </div>
 </div>
 
 
