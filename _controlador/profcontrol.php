@@ -19,4 +19,5 @@
     $ret = $profcontrol->get_qry($_REQUEST['qrytipo']);
     $ret = json_encode($ret);//JSON_UNESCAPED_UNICODE
     echo $ret;
+    //Carrega disciplina e professor no profView
 ?>

@@ -73,7 +73,7 @@
 		}
 
 		public function qry_all(&$rowsize,$dia)//SALA HORA DISC PROF
-		{
+		{									//Pega todos os horarios de um dia
 			$qstr = "SELECT aula.aula_hora,aula.aula_sala,
 			disciplina.disc_nome, professor.prof_nome
 			FROM aula,professor,disciplina

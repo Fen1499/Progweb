@@ -41,7 +41,7 @@
     }
 
     $addcontrol = new add_control($db);
-    switch($_REQUEST['addid'])
+    switch($_REQUEST['controleid'])
     {
         case "1":
             $ret = $addcontrol->addhorario($_REQUEST['auladata']);

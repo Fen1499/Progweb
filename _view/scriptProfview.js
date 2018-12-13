@@ -20,7 +20,7 @@ function showhidden(str)
                alert(this.responseText);
             }
         };
-        request.open("GET", "../_controlador/addcontrol.php?auladata="+vet+"&addid=1", true);
+        request.open("GET", "../_controlador/horariocontrol.php?auladata="+vet+"&controleid=1", true);
         request.send();
 
     }
@@ -35,7 +35,7 @@ function showhidden(str)
                alert(this.responseText);
             }
         };
-        request.open("GET", "../_controlador/addcontrol.php?newdisc="+x+"&addid=2", true);
+        request.open("GET", "../_controlador/horariocontrol.php?newdisc="+x+"&controleid=2", true);
         request.send(); 
     }
 
@@ -56,7 +56,7 @@ function showhidden(str)
                alert(this.responseText);
             }
         };
-        request.open("GET", "../_controlador/addcontrol.php?aulahora="+vet+"&addid=3", true);
+        request.open("GET", "../_controlador/horariocontrol.php?aulahora="+vet+"&controleid=3", true);
         request.send();
     }
 
