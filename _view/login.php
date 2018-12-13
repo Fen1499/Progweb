@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="loginInterface">
-		<form action="../_view/mainview.php?tipo=aluno" method="post"><!--action= algum view que acessa o controller-->
+		<form action="../_view/mainview.php?tipo=aluno" method="post">
 			<h1>Login: </h1> <input type="text" name="login">
 			<h1>Password: </h1> <input type="Password" name="pass">
 			<h1><input type="submit" value="Entrar"></h1>

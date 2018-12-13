@@ -20,9 +20,3 @@
 	</div>
 	<script src="scriptQuadro.js"></script>
 </div>
-<?php
-//TO DO
-//OTIMIZAR/REFATORAR
-//FAZER UMA TRANSIÇÃO SHOW
-//TRATAR O PROBLEMA DOS SLOTS DE HORA
-?>

@@ -7,7 +7,7 @@
          public function get_horario($dia)//Retorna os horarios do dia pro view
 		{
 			$numrows;
-			$arr = $this->db->qry_all($numrows,$dia);//Passa por referencia pra pegar 2 valores
+			$arr = $this->db->qry_all($numrows,$dia);//Passa por referencia pra pegar 2 valores[N USADOS]
 			return $arr;//Todas as aulas do dia
 		}
 

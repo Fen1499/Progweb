@@ -1,5 +1,4 @@
-<?php //include 'quadro.php'?>
-<div id="teste">RESERVADO PRA MENSAGENS DE TESTE</div>
+<?php include 'quadro.php'?>
 <div class="boxquadro">
     <ul>
         <li><button onclick=showhidden("addhorario") >ADICIONAR HORARIO</button></li>

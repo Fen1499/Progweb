@@ -11,22 +11,11 @@
 		{							 //Não da pra instanciar métodos privados direto.
 			$this->servername = "localhost";
 			$this->user = "root";
-			//$this->password = "felipe123";
 			$this->dbname = "quadro";
 			$this->conn = new mysqli($this->servername,$this->user,$this->password,$this->dbname);
 			$this->conn->set_charset("utf8"); //Passa tudo que vem do db pra utf8
 		}
 
-		private function Conec()//Conecta com o bd [N USADO, mudou para o construtor]
-		{
-			return new mysqli($this->servername,$this->user,$this->password,$this->dbname);
-		}
-
-		private function model_start()//[N USADO]
-		{
-			$this->conn = $this->Conec();
-			if($this->conn->connect_error){return "BD ERRO";}
-		}
 
 		public static function getInstance()
 		{
@@ -121,13 +110,7 @@
 			return $arr;
 		}
 
-		public function add_horario($disc_id,$prof_id,$dia,$sala,$hora){//TEM QUE VER ISSO AQUI
-			
-			 //TESTE
-			 $f = fopen("addtest.txt","w");
-			 fwrite($f,"dia: ".$dia."_discid:".$disc_id."_profid:".$prof_id);
-			 fclose($f);
-			 //FIM DO TESTE
+		public function add_horario($disc_id,$prof_id,$dia,$sala,$hora){
 			$qstr = "INSERT INTO aula(aula_dia,aula_sala,aula_hora,disc_id,prof_id)
 			VALUES($dia,$sala,$hora,$disc_id,$prof_id)";
 			return $this->conn->query($qstr);

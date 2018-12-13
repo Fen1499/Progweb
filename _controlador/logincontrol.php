@@ -2,7 +2,6 @@
     include 'controlador.php';//CONTROLADOR
     class login_control extends controlador{
 
-        //ESSA CONSTRUTOR N PARECE LEGAL, MAS FUNCIONA
         function __construct($database)
         {
             parent::__construct($database);
@@ -20,7 +19,7 @@
                 }
                 else
                 {
-                    require_once('../_view/login.php');//USER OS PASS ERRADO
+                    require_once('../_view/login.php');//USER OU PASS ERRADO
                 }  
             }
             if($tipo =="prof")
@@ -32,7 +31,7 @@
                 }                    
                 else
                 {
-                    require_once('../_view/loginprof.php');
+                    require_once('../_view/loginprof.php');//USER OU PASS ERRADO
                 }
             }
                 

@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	//set_cookie();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

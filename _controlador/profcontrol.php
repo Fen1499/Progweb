@@ -18,10 +18,5 @@
     $profcontrol = new prof_control($db);
     $ret = $profcontrol->get_qry($_REQUEST['qrytipo']);
     $ret = json_encode($ret);//JSON_UNESCAPED_UNICODE
-    //TESTE
-    $f = fopen("jsontest.txt","w");
-	fwrite($f,$ret);
-	fclose($f);
-	//FIM DO TESTE
     echo $ret;
 ?>

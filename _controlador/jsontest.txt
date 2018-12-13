@@ -1,1 +1,0 @@
-["1 Baz\u00edlio","2 Robson","3 Fabio Gon\u00e7alves"]

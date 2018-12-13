@@ -40,5 +40,5 @@
             break;
 
     }
-    echo $ret;//Fora do escopo mas parece funcionar
+    echo $ret;
 ?>
