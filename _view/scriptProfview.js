@@ -1,7 +1,13 @@
 function showhidden(str)
     {
-        x = document.getElementById(str);
-        x.hidden = !x.hidden;
+        x = document.getElementById("opts");
+        x = x.getElementsByTagName("DIV");
+        for(aux=0;aux<3;aux++){
+            if(x[aux].id == str){
+                x[aux].hidden = !x[aux].hidden;
+            }
+            else{x[aux].hidden = true;}
+        }
     }
 
     function tryADD()
